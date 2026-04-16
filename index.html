@@ -37,8 +37,9 @@
             <div class="flex justify-between items-center">
                 <!-- Logo -->
                 <a href="#home" class="flex items-center cursor-pointer group hover:opacity-90">
-                    <!-- Logótipo Novo (LB) -->
-                    <img src="logo-lucas.png" alt="Logotipo Lucas Brito" class="h-12 w-12 flex-shrink-0 mr-3.5 transition-transform duration-500 group-hover:scale-105" />
+                    <!-- Logótipo Imagem Real LB -->
+                    <img src="logo.png" alt="Logotipo Lucas Brito" class="h-12 w-12 object-contain flex-shrink-0 mr-3.5 transition-transform duration-500 group-hover:scale-105" />
+                    
                     <div class="flex flex-col justify-center">
                         <span class="text-white font-serif font-bold text-xl leading-none tracking-widest">LUCAS BRITO</span>
                         <span class="text-amber-500 text-[9px] uppercase tracking-[0.25em] mt-1.5 font-medium">ADVOCACIA E CONSULTORIA</span>
@@ -219,7 +220,8 @@
             <div class="flex flex-col lg:flex-row items-center gap-16">
                 <div class="lg:w-1/2 relative">
                     <div class="absolute -inset-4 bg-amber-500/10 transform rotate-3 rounded-xl"></div>
-                    <img src="foto-lucas.jpg" alt="Dr. Lucas Brito" class="relative rounded-xl shadow-2xl object-cover h-[500px] w-full" style="object-position: top;" />
+                    <!-- Adicionado fallback (imagem reserva) caso a foto-lucas.jpg não esteja na pasta -->
+                    <img src="foto-lucas.jpg" onerror="this.src='https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'" alt="Dr. Lucas Brito" class="relative rounded-xl shadow-2xl object-cover h-[500px] w-full" style="object-position: top;" />
                     <div class="absolute -bottom-6 -right-6 bg-slate-900 text-white p-6 rounded-lg shadow-xl hidden md:block border-b-4 border-amber-500">
                         <div class="text-2xl font-bold text-amber-500 mb-1">Advocacia</div>
                         <div class="text-sm font-medium tracking-wide">Humanizada e Personalizada</div>
@@ -244,7 +246,7 @@
                     </div>
                     
                     <div class="mt-10 flex items-center">
-                        <img src="foto-lucas.jpg" alt="Dr. Lucas Brito" class="w-16 h-16 rounded-full object-cover border-2 border-amber-500 mr-4" style="object-position: top;" />
+                        <img src="foto-lucas.jpg" onerror="this.src='https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'" alt="Dr. Lucas Brito" class="w-16 h-16 rounded-full object-cover border-2 border-amber-500 mr-4" style="object-position: top;" />
                         <div>
                             <h4 class="font-bold text-slate-900 text-lg">Dr. Lucas Brito</h4>
                             <p class="text-slate-500 text-sm">Advogado Titular</p>
@@ -279,8 +281,8 @@
                 <!-- Contact Info -->
                 <div class="lg:w-2/5 bg-slate-900 text-white p-10 lg:p-12 flex flex-col justify-between relative overflow-hidden">
                     <div class="absolute top-0 right-0 -mt-20 -mr-20 opacity-[0.05] pointer-events-none select-none">
-                        <!-- Logotipo gigante como fundo -->
-                        <img src="logo-lucas.png" alt="" class="h-96 w-96 object-contain" style="filter: brightness(0) invert(1);" />
+                        <!-- Logotipo Imagem Real LB - Fundo Gigante -->
+                        <img src="logo.png" alt="" class="h-96 w-96 object-contain" style="filter: brightness(0) invert(1);" />
                     </div>
                     
                     <div class="relative z-10">
@@ -379,7 +381,8 @@
                 <!-- Brand -->
                 <div class="col-span-1 lg:col-span-1">
                     <a href="#home" class="flex items-center mb-6 cursor-pointer group hover:opacity-90">
-                        <img src="logo-lucas.png" alt="Logotipo Lucas Brito" class="h-10 w-10 mr-3 transition-transform duration-500 group-hover:scale-105" />
+                        <!-- Logótipo no footer Imagem Real LB -->
+                        <img src="logo.png" alt="Logotipo Lucas Brito" class="h-10 w-10 object-contain mr-3 transition-transform duration-500 group-hover:scale-105" />
                         <div class="flex flex-col justify-center">
                             <span class="text-white font-serif font-bold text-lg leading-none tracking-widest">LUCAS BRITO</span>
                             <span class="text-amber-500 text-[8px] uppercase tracking-[0.25em] mt-1.5 font-medium">ADVOCACIA E CONSULTORIA</span>
