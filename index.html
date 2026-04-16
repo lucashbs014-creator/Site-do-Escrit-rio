@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lucas Brito | Advocacia e Consultoria</title>
+    
+    <!-- Importação do Tailwind CSS para o design -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Importação dos Ícones -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Fontes do Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Merriweather', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans text-slate-800 bg-slate-50 min-h-screen relative pb-16 md:pb-0">
+
+    <!-- Navbar -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-slate-900 py-5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center">
+                <!-- Logo -->
+                <a href="#home" class="flex items-center cursor-pointer group hover:opacity-90">
+                    <!-- Logótipo -->
+                    <img src="baixados (1).png" alt="Logotipo Lucas Brito" class="h-12 w-12 flex-shrink-0 mr-3.5 transition-transform duration-500 group-hover:scale-105" />
+                    <div class="flex flex-col justify-center">
+                        <span class="text-white font-serif font-bold text-xl leading-none tracking-widest">LUCAS BRITO</span>
+                        <span class="text-amber-500 text-[9px] uppercase tracking-[0.25em] mt-1.5 font-medium">ADVOCACIA E CONSULTORIA</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#home" class="text-gray-300 hover:text-amber-500 text-sm font-medium transition-colors">Início</a>
+                    <a href="#sobre" class="text-gray-300 hover:text-amber-500 text-sm font-medium transition-colors">O Escritório</a>
+                    <a href="#areas" class="text-gray-300 hover:text-amber-500 text-sm font-medium transition-colors">Áreas de Atuação</a>
+                    <a href="#contacto" class="bg-amber-600 hover:bg-amber-500 text-white px-5 py-2 rounded-sm text-sm font-semibold transition-colors duration-300">
+                        Fale Connosco
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-white hover:text-amber-500 focus:outline-none">
+                        <i data-lucide="menu" id="icon-menu" class="h-6 w-6"></i>
+                        <i data-lucide="x" id="icon-close" class="h-6 w-6 hidden"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-800 shadow-xl absolute w-full left-0 top-full border-t border-slate-700">
+            <div class="px-4 pt-2 pb-6 space-y-1 flex flex-col">
+                <a href="#home" class="text-left text-gray-300 hover:text-amber-500 hover:bg-slate-700 px-3 py-3 rounded-md text-base font-medium">Início</a>
+                <a href="#sobre" class="text-left text-gray-300 hover:text-amber-500 hover:bg-slate-700 px-3 py-3 rounded-md text-base font-medium">O Escritório</a>
+                <a href="#areas" class="text-left text-gray-300 hover:text-amber-500 hover:bg-slate-700 px-3 py-3 rounded-md text-base font-medium">Áreas de Atuação</a>
+                <a href="#contacto" class="text-left text-amber-500 font-bold hover:bg-slate-700 px-3 py-3 rounded-md text-base">Fale Connosco</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden flex items-center min-h-[90vh]">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1589391886645-d51941baf7fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Símbolo do Direito - Martelo e Livros" class="w-full h-full object-cover" />
+            <div class="absolute inset-0 bg-slate-900/80"></div>
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="max-w-3xl">
+                <div class="inline-flex items-center px-3 py-1 rounded-full border border-amber-500/30 bg-amber-500/10 text-amber-400 text-sm font-medium mb-6">
+                    <i data-lucide="award" class="h-4 w-4 mr-2"></i>
+                    Excelência Jurídica e Comprometimento
+                </div>
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold text-white leading-tight mb-6">
+                    Defendendo os seus direitos com <span class="text-amber-500">firmeza</span> e <span class="text-amber-500">ética</span>.
+                </h1>
+                <p class="text-lg sm:text-xl text-gray-300 mb-10 leading-relaxed">
+                    Atuação especializada, estratégica e humanizada nas áreas Criminal, Civil e do Consumidor. A nossa prioridade é a sua tranquilidade e justiça.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#contacto" class="bg-amber-600 hover:bg-amber-500 text-white px-8 py-4 rounded-sm text-lg font-semibold transition-all duration-300 flex items-center justify-center">
+                        Agendar Consulta
+                        <i data-lucide="chevron-right" class="ml-2 h-5 w-5"></i>
+                    </a>
+                    <a href="#areas" class="bg-transparent border border-gray-400 hover:border-white text-white px-8 py-4 rounded-sm text-lg font-semibold transition-all duration-300 flex items-center justify-center">
+                        Conheça as Nossas Áreas
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Diferenciais / Status -->
+    <section class="bg-slate-800 py-12 border-b border-slate-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center divide-y md:divide-y-0 md:divide-x divide-slate-700">
+                <div class="p-4 transition-transform hover:-translate-y-1 duration-300">
+                    <i data-lucide="shield-alert" class="h-10 w-10 text-amber-500 mx-auto mb-4"></i>
+                    <h3 class="text-xl font-bold text-white mb-2">Sigilo Absoluto</h3>
+                    <p class="text-gray-400 text-sm">Tratamos cada caso com a máxima discrição e segurança das informações.</p>
+                </div>
+                <div class="p-4 transition-transform hover:-translate-y-1 duration-300">
+                    <i data-lucide="clock" class="h-10 w-10 text-amber-500 mx-auto mb-4"></i>
+                    <h3 class="text-xl font-bold text-white mb-2">Atendimento Ágil</h3>
+                    <p class="text-gray-400 text-sm">Prontidão para atuar em situações emergenciais, especialmente na esfera criminal.</p>
+                </div>
+                <div class="p-4 transition-transform hover:-translate-y-1 duration-300">
+                    <i data-lucide="users" class="h-10 w-10 text-amber-500 mx-auto mb-4"></i>
+                    <h3 class="text-xl font-bold text-white mb-2">Foco no Cliente</h3>
+                    <p class="text-gray-400 text-sm">Estratégias personalizadas desenhadas para alcançar o melhor resultado para si.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Áreas de Atuação -->
+    <section id="areas" class="py-24 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-amber-600 font-bold tracking-wider uppercase text-sm mb-2">Especialidades</h2>
+                <h3 class="text-3xl md:text-4xl font-serif font-bold text-slate-900 mb-6">Nossas Áreas de Atuação</h3>
+                <div class="h-1 w-20 bg-amber-500 mx-auto rounded-full"></div>
+                <p class="mt-6 text-slate-600 text-lg">
+                    Oferecemos representação legal de alto nível focada em três pilares fundamentais do direito, garantindo expertise profunda em cada caso.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <!-- Criminal -->
+                <div class="bg-white rounded-lg shadow-xl shadow-slate-200/50 overflow-hidden group hover:-translate-y-2 transition-transform duration-300 border border-slate-100 flex flex-col">
+                    <div class="h-48 overflow-hidden relative">
+                        <div class="absolute inset-0 bg-slate-900/40 group-hover:bg-slate-900/20 transition-colors z-10"></div>
+                        <img src="https://images.unsplash.com/photo-1453945619913-79ec89a82c51?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Direito Criminal" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" />
+                        <div class="absolute top-4 left-4 z-20 bg-amber-500 p-3 rounded-sm shadow-lg">
+                            <i data-lucide="shield-alert" class="h-6 w-6 text-white"></i>
+                        </div>
+                    </div>
+                    <div class="p-8 flex-grow">
+                        <h4 class="text-2xl font-bold text-slate-900 mb-3 font-serif">Direito Criminal</h4>
+                        <p class="text-slate-600 mb-6">
+                            Defesa técnica, combativa e intransigente dos seus direitos penais. Atuamos em inquéritos policiais, prisões em flagrante, audiências de custódia, tribunais do júri e recursos em instâncias superiores.
+                        </p>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-start"><i data-lucide="chevron-right" class="h-5 w-5 text-amber-500 mr-2 shrink-0"></i> <span class="text-sm text-slate-700">Prisão em Flagrante / Custódia</span></li>
+                            <li class="flex items-start"><i data-lucide="chevron-right" class="h-5 w-5 text-amber-500 mr-2 shrink-0"></i> <span class="text-sm text-slate-700">Crimes contra o Patrimônio e Vida</span></li>
+                            <li class="flex items-start"><i data-lucide="chevron-right" class="h-5 w-5 text-amber-500 mr-2 shrink-0"></i> <span class="text-sm text-slate-700">Lei de Drogas e Maria da Penha</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Civil e Família -->
+                <div class="bg-white rounded-lg shadow-xl shadow-slate-200/50 overflow-hidden group hover:-translate-y-2 transition-transform duration-300 border border-slate-100 flex flex-col">
+                    <div class="h-48 overflow-hidden relative">
+                        <div class="absolute inset-0 bg-slate-900/40 group-hover:bg-slate-900/20 transition-colors z-10"></div>
+                        <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Direito Civil" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" />
+                        <div class="absolute top-4 left-4 z-20 bg-amber-500 p-3 rounded-sm shadow-lg">
+                            <!-- Mudança do ícone para "scale" (balança/justiça) ou "book-open" para representar o código civil -->
+                            <i data-lucide="scale" class="h-6 w-6 text-white"></i>
+                        </div>
+                    </div>
+                    <div class="p-8 flex-grow">
+                        <h4 class="text-2xl font-bold text-slate-900 mb-3 font-serif">Direito Civil</h4>
+                        <p class="text-slate-600 mb-6">
+                            Atuação estratégica e abrangente nas diversas esferas civis. Representamos os seus interesses em conflitos patrimoniais, contratuais e, com especial dedicação, na resolução de questões do Direito de Família.
+                        </p>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-start"><i data-lucide="chevron-right" class="h-5 w-5 text-amber-500 mr-2 shrink-0"></i> <span class="text-sm text-slate-700">Direito de Família (Divórcio, Pensão e Guarda)</span></li>
+                            <li class="flex items-start"><i data-lucide="chevron-right" class="h-5 w-5 text-amber-500 mr-2 shrink-0"></i> <span class="text-sm text-slate-700">Sucessões (Inventários e Planejamento Sucessório)</span></li>
+                            <li class="flex items-start"><i data-lucide="chevron-right" class="h-5 w-5 text-amber-500 mr-2 shrink-0"></i> <span class="text-sm text-slate-700">Contratos, Posse e Responsabilidade Civil</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Consumidor -->
+                <div class="bg-white rounded-lg shadow-xl shadow-slate-200/50 overflow-hidden group hover:-translate-y-2 transition-transform duration-300 border border-slate-100 flex flex-col">
+                    <div class="h-48 overflow-hidden relative">
+                        <div class="absolute inset-0 bg-slate-900/40 group-hover:bg-slate-900/20 transition-colors z-10"></div>
+                        <img src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Direito do Consumidor" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" />
+                        <div class="absolute top-4 left-4 z-20 bg-amber-500 p-3 rounded-sm shadow-lg">
+                            <i data-lucide="shopping-bag" class="h-6 w-6 text-white"></i>
+                        </div>
+                    </div>
+                    <div class="p-8 flex-grow">
+                        <h4 class="text-2xl font-bold text-slate-900 mb-3 font-serif">Direito do Consumidor</h4>
+                        <p class="text-slate-600 mb-6">
+                            Proteção efetiva contra práticas abusivas de empresas, planos de saúde, bancos e companhias aéreas. Trabalhamos para garantir o respeito aos seus direitos e a devida reparação por danos sofridos.
+                        </p>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-start"><i data-lucide="chevron-right" class="h-5 w-5 text-amber-500 mr-2 shrink-0"></i> <span class="text-sm text-slate-700">Atrasos e Cancelamentos de Voos</span></li>
+                            <li class="flex items-start"><i data-lucide="chevron-right" class="h-5 w-5 text-amber-500 mr-2 shrink-0"></i> <span class="text-sm text-slate-700">Negativas de Planos de Saúde</span></li>
+                            <li class="flex items-start"><i data-lucide="chevron-right" class="h-5 w-5 text-amber-500 mr-2 shrink-0"></i> <span class="text-sm text-slate-700">Cobranças Indevidas e Indenizações</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre o Escritório -->
+    <section id="sobre" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row items-center gap-16">
+                <div class="lg:w-1/2 relative">
+                    <div class="absolute -inset-4 bg-amber-500/10 transform rotate-3 rounded-xl"></div>
+                    <img src="foto-lucas.jpg" alt="Dr. Lucas Brito" class="relative rounded-xl shadow-2xl object-cover h-[500px] w-full" style="object-position: top;" />
+                    <div class="absolute -bottom-6 -right-6 bg-slate-900 text-white p-6 rounded-lg shadow-xl hidden md:block border-b-4 border-amber-500">
+                        <div class="text-2xl font-bold text-amber-500 mb-1">Advocacia</div>
+                        <div class="text-sm font-medium tracking-wide">Humanizada e Personalizada</div>
+                    </div>
+                </div>
+                
+                <div class="lg:w-1/2">
+                    <h2 class="text-amber-600 font-bold tracking-wider uppercase text-sm mb-2">Perfil Profissional</h2>
+                    <h3 class="text-3xl md:text-4xl font-serif font-bold text-slate-900 mb-6">Atuação moderna, dedicada e focada em resultados.</h3>
+                    <div class="h-1 w-20 bg-amber-500 mb-8"></div>
+                    
+                    <div class="space-y-6 text-slate-600 text-lg">
+                        <p>
+                            Com um perfil dinâmico e contemporâneo, o meu foco está em oferecer um atendimento verdadeiramente personalizado, transparente e próximo a cada cliente.
+                        </p>
+                        <p>
+                            Compreendo que estar envolvido em questões legais — seja na esfera criminal, lidando com dinâmicas familiares complexas, ou enfrentando corporações que desrespeitam o consumidor — é um momento de vulnerabilidade e alto estresse.
+                        </p>
+                        <p>
+                            A minha missão é ser o seu escudo e a sua voz. Alio forte conhecimento técnico atualizado a uma abordagem combativa, garantindo agilidade nas respostas e dedicação exclusiva para buscar a melhor solução para o seu caso.
+                        </p>
+                    </div>
+                    
+                    <div class="mt-10 flex items-center">
+                        <img src="foto-lucas.jpg" alt="Dr. Lucas Brito" class="w-16 h-16 rounded-full object-cover border-2 border-amber-500 mr-4" style="object-position: top;" />
+                        <div>
+                            <h4 class="font-bold text-slate-900 text-lg">Dr. Lucas Brito</h4>
+                            <p class="text-slate-500 text-sm">Advogado Titular</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="bg-amber-600 py-16">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-serif font-bold text-white mb-6">Precisa de assistência jurídica urgente?</h2>
+            <p class="text-amber-100 text-lg mb-8">A nossa equipe está pronta para analisar o seu caso e fornecer a orientação legal adequada com total sigilo.</p>
+            <a href="#contacto" class="inline-flex items-center bg-slate-900 hover:bg-slate-800 text-white px-8 py-4 rounded-sm text-lg font-bold transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1">
+                Falar com um Especialista
+            </a>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contacto" class="py-24 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-amber-600 font-bold tracking-wider uppercase text-sm mb-2">Atendimento</h2>
+                <h3 class="text-3xl md:text-4xl font-serif font-bold text-slate-900 mb-6">Entre em Contacto</h3>
+                <div class="h-1 w-20 bg-amber-500 mx-auto rounded-full"></div>
+            </div>
+
+            <div class="flex flex-col lg:flex-row gap-12 bg-white rounded-2xl shadow-xl overflow-hidden">
+                <!-- Contact Info -->
+                <div class="lg:w-2/5 bg-slate-900 text-white p-10 lg:p-12 flex flex-col justify-between relative overflow-hidden">
+                    <div class="absolute top-0 right-0 -mt-20 -mr-20 opacity-[0.05] pointer-events-none select-none">
+                        <img src="baixados (1).png" alt="" class="h-96 w-96 object-contain" style="filter: brightness(0) invert(1);" />
+                    </div>
+                    
+                    <div class="relative z-10">
+                        <h4 class="text-2xl font-serif font-bold mb-8">Informações de Contacto</h4>
+                        <p class="text-gray-300 mb-10">
+                            Preencha o formulário ou utilize um dos nossos canais diretos. Retornaremos o mais breve possível.
+                        </p>
+                        
+                        <div class="space-y-8">
+                            <div class="flex items-start">
+                                <div class="bg-amber-500/20 p-3 rounded-full mr-4 flex-shrink-0">
+                                    <i data-lucide="phone" class="h-6 w-6 text-amber-500"></i>
+                                </div>
+                                <div>
+                                    <p class="text-sm text-gray-400 font-medium">Telefone / Plantão 24h</p>
+                                    <p class="text-lg font-semibold break-all">(92) 99190-2863</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-amber-500/20 p-3 rounded-full mr-4 flex-shrink-0">
+                                    <i data-lucide="mail" class="h-6 w-6 text-amber-500"></i>
+                                </div>
+                                <div>
+                                    <p class="text-sm text-gray-400 font-medium">E-mail</p>
+                                    <p class="text-lg font-semibold break-all">lucashbs.adv@gmail.com</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="lg:w-3/5 p-10 lg:p-12">
+                    <h4 class="text-2xl font-bold text-slate-900 mb-6 font-serif">Envie a sua mensagem</h4>
+                    <form class="space-y-6" onsubmit="enviarParaWhatsApp(event)">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-slate-700 mb-2">Nome Completo <span class="text-red-500">*</span></label>
+                                <input type="text" id="name" required class="w-full px-4 py-3 rounded-md border border-slate-300 focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none transition-all" placeholder="O seu nome" />
+                            </div>
+                            <div>
+                                <label for="phone" class="block text-sm font-medium text-slate-700 mb-2">Telefone / WhatsApp</label>
+                                <input type="tel" id="phone" class="w-full px-4 py-3 rounded-md border border-slate-300 focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none transition-all" placeholder="(00) 00000-0000" />
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label for="area" class="block text-sm font-medium text-slate-700 mb-2">Área de Interesse</label>
+                            <select id="area" class="w-full px-4 py-3 rounded-md border border-slate-300 focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none transition-all bg-white">
+                                <option value="">Selecione a área principal</option>
+                                <option value="Direito Criminal">Direito Criminal</option>
+                                <option value="Direito Civil e de Família">Direito Civil e de Família</option>
+                                <option value="Direito do Consumidor">Direito do Consumidor</option>
+                                <option value="Outro / Não sei">Outro / Não sei</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-slate-700 mb-2">Descreva o seu caso brevemente <span class="text-red-500">*</span></label>
+                            <textarea id="message" required rows="4" class="w-full px-4 py-3 rounded-md border border-slate-300 focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none transition-all resize-none" placeholder="Como podemos ajudar?"></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full bg-slate-900 hover:bg-slate-800 text-white font-bold py-4 rounded-md transition-colors duration-300 flex justify-center items-center">
+                            <span>Enviar Mensagem via WhatsApp</span>
+                        </button>
+                        <p class="text-xs text-slate-500 text-center mt-4">
+                            * As informações enviadas são tratadas com absoluto sigilo profissional.
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 pt-16 pb-8 border-t-4 border-amber-600">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                
+                <!-- Brand -->
+                <div class="col-span-1 lg:col-span-1">
+                    <a href="#home" class="flex items-center mb-6 cursor-pointer group hover:opacity-90">
+                        <img src="baixados (1).png" alt="Logotipo Lucas Brito" class="h-10 w-10 mr-3 transition-transform duration-500 group-hover:scale-105" />
+                        <div class="flex flex-col justify-center">
+                            <span class="text-white font-serif font-bold text-lg leading-none tracking-widest">LUCAS BRITO</span>
+                            <span class="text-amber-500 text-[8px] uppercase tracking-[0.25em] mt-1.5 font-medium">ADVOCACIA E CONSULTORIA</span>
+                        </div>
+                    </a>
+                    <p class="text-slate-400 text-sm mb-6">
+                        Advocacia estratégica e especializada, comprometida com a ética, sigilo e resultados concretos para os nossos clientes.
+                    </p>
+                    <div class="text-slate-400 text-sm">
+                        <span class="block font-bold text-white mb-1">OAB/AM 21543</span>
+                    </div>
+                </div>
+
+                <!-- Links -->
+                <div>
+                    <h4 class="text-white font-bold mb-6 uppercase text-sm tracking-wider">Navegação</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#home" class="text-slate-400 hover:text-amber-500 text-sm transition-colors block">Início</a></li>
+                        <li><a href="#sobre" class="text-slate-400 hover:text-amber-500 text-sm transition-colors block">O Escritório</a></li>
+                        <li><a href="#areas" class="text-slate-400 hover:text-amber-500 text-sm transition-colors block">Áreas de Atuação</a></li>
+                        <li><a href="#contacto" class="text-slate-400 hover:text-amber-500 text-sm transition-colors block">Contacto</a></li>
+                    </ul>
+                </div>
+
+                <!-- Áreas -->
+                <div>
+                    <h4 class="text-white font-bold mb-6 uppercase text-sm tracking-wider">Especialidades</h4>
+                    <ul class="space-y-3">
+                        <li class="text-slate-400 text-sm">Direito Criminal</li>
+                        <li class="text-slate-400 text-sm">Direito Civil e de Família</li>
+                        <li class="text-slate-400 text-sm">Direito do Consumidor</li>
+                        <li class="text-slate-400 text-sm">Plantão Criminal 24h</li>
+                    </ul>
+                </div>
+
+                <!-- Horário -->
+                <div>
+                    <h4 class="text-white font-bold mb-6 uppercase text-sm tracking-wider">Horário de Atendimento</h4>
+                    <ul class="space-y-3 text-sm text-slate-400">
+                        <li class="flex justify-between border-b border-slate-800 pb-2">
+                            <span>Segunda - Sexta:</span>
+                            <span class="text-white">09:00 - 18:00</span>
+                        </li>
+                        <li class="flex justify-between border-b border-slate-800 pb-2">
+                            <span>Sábado - Domingo:</span>
+                            <span class="text-white">Fechado</span>
+                        </li>
+                        <li class="mt-4 text-amber-500 font-bold">
+                            Plantão Criminal 24h para emergências.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-slate-500 text-sm text-center md:text-left mb-4 md:mb-0">
+                    &copy; <span id="year"></span> Lucas Brito. Todos os direitos reservados.
+                </p>
+                <div class="flex space-x-6 text-sm text-slate-500">
+                    <a href="https://www.linkedin.com/in/lucas-henrique-b-109a0024a" target="_blank" rel="noopener noreferrer" class="hover:text-amber-500 transition-colors flex items-center">
+                        <i data-lucide="linkedin" class="h-5 w-5 mr-1"></i> LinkedIn
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/5592991902863?text=Olá,%20gostaria%20de%20agendar%20uma%20consulta%20jurídica." target="_blank" rel="noopener noreferrer" class="fixed bottom-24 md:bottom-6 right-6 bg-[#25D366] hover:bg-[#20bd5a] text-white p-4 rounded-full shadow-2xl hover:scale-110 transition-all duration-300 z-40 flex items-center justify-center group" aria-label="Contato via WhatsApp">
+        <i data-lucide="message-circle" class="h-8 w-8"></i>
+        <span class="absolute right-full mr-4 bg-slate-900 text-white text-sm px-3 py-2 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none shadow-lg">
+            Fale connosco agora!
+        </span>
+    </a>
+
+    <!-- Banner de Cookies (LGPD) -->
+    <div id="cookie-banner" class="fixed bottom-0 left-0 w-full bg-slate-900 border-t border-slate-800 text-slate-300 py-4 px-6 z-50 shadow-2xl flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div class="flex items-start sm:items-center gap-3 max-w-4xl">
+            <i data-lucide="info" class="h-5 w-5 text-amber-500 flex-shrink-0 mt-0.5 sm:mt-0"></i>
+            <p class="text-sm">
+                Utilizamos cookies e tecnologias semelhantes para melhorar a sua experiência no nosso website. 
+                Ao continuar a navegar, assumimos que concorda com a nossa política de privacidade.
+            </p>
+        </div>
+        <button onclick="document.getElementById('cookie-banner').style.display='none'" class="whitespace-nowrap bg-amber-600 hover:bg-amber-500 text-white px-6 py-2 rounded text-sm font-semibold transition-colors w-full sm:w-auto">
+            Entendi
+        </button>
+    </div>
+
+    <!-- Scripts da Página -->
+    <script>
+        // Inicializar ícones
+        lucide.createIcons();
+
+        // Ano atual no footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Lógica da Navbar transparente -> com cor
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 20) {
+                navbar.classList.add('bg-slate-900/95', 'backdrop-blur-sm', 'shadow-lg', 'py-3');
+                navbar.classList.remove('bg-slate-900', 'py-5');
+            } else {
+                navbar.classList.add('bg-slate-900', 'py-5');
+                navbar.classList.remove('bg-slate-900/95', 'backdrop-blur-sm', 'shadow-lg', 'py-3');
+            }
+        });
+
+        // Lógica do Menu Mobile
+        const btnMenu = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        const iconMenu = document.getElementById('icon-menu');
+        const iconClose = document.getElementById('icon-close');
+
+        btnMenu.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+            iconMenu.classList.toggle('hidden');
+            iconClose.classList.toggle('hidden');
+        });
+
+        // Rolagem Suave e fechar menu ao clicar num link
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                if (!menu.classList.contains('hidden')) {
+                    menu.classList.add('hidden');
+                    iconMenu.classList.remove('hidden');
+                    iconClose.classList.add('hidden');
+                }
+
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Função do WhatsApp blindada
+        function enviarParaWhatsApp(event) {
+            event.preventDefault();
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            const areaElement = document.getElementById('area');
+            const area = areaElement.options[areaElement.selectedIndex].value;
+            const message = document.getElementById('message').value;
+
+            let textoFormatado = `Olá, Dr. Lucas! O meu nome é *${name}*.\n`;
+            if(phone) textoFormatado += `*Telefone:* ${phone}\n`;
+            if(area) textoFormatado += `*Área de Interesse:* ${area}\n`;
+            textoFormatado += `\n*Mensagem:* ${message}`;
+
+            const urlWhatsApp = `https://wa.me/5592991902863?text=${encodeURIComponent(textoFormatado)}`;
+            window.open(urlWhatsApp, '_blank');
+        }
+    </script>
+</body>
+</html>
